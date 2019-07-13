@@ -1,4 +1,13 @@
-function searchNewYorkTimesArticle(searchTerm, maxResults, beginYear, endYear) {
+$(document).ready(function() {
+  $("#btnSubmit").click(function() {
+    alert("button");
+  });
+  function searchNewYorkTimesArticle(
+    searchTerm,
+    maxResults,
+    beginYear,
+    endYear
+  ) {
     if (maxResults > 10) {
       maxResults = 10;
     }
@@ -14,9 +23,9 @@ function searchNewYorkTimesArticle(searchTerm, maxResults, beginYear, endYear) {
       "&end_date=" +
       endYear +
       "0101";
-  
+
     console.log(queryUrl);
-  
+
     fetch(queryUrl)
       .then(function(resp) {
         console.log("Read Completed");
@@ -24,16 +33,16 @@ function searchNewYorkTimesArticle(searchTerm, maxResults, beginYear, endYear) {
       })
       .then(function(data) {
         console.log("Displaying Response of Fetch : ");
-        console.log (data.response.docs.length);
+        console.log(data.response.docs.length);
         for (var i = 0; i < maxResults; i++) {
           resultFromSearch.push({
             headline: data.response.docs[i].headline.main,
             url: data.response.docs[i].web_url,
-            byline : data.response.docs[i].byline.original
+            byline: data.response.docs[i].byline.original
           });
         }
         console.log(resultFromSearch);
         return resultFromSearch;
       });
   }
-  
+});
