@@ -1,0 +1,11 @@
+body {
+  background-image: url("../images/Background/ep_naturalwhite.png");
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+}
+.ui-datepicker-calendar {
+  display: none;
+}

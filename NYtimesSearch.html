@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>New York Times Article Search</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="NYtimesSearch.css" />
+  </head>
+  <body>
+    <div class="bg-2 container">
+      <h3>New York Times Search</h3>
+      <div class="">
+        <!-- Search form -->
+        <div class="md-form active-pink-2 mb-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter your search here"
+            aria-label="Search"
+          />
+        </div>
+        <!--# of articles to retrieve-->
+        <div class="">
+          <div class="row text-center justify-content-md-center">
+            <form class="col-md-4">
+              <label>How many articles to retrieve?</label>
+              <select class="form-control select2">
+                <option>1</option>
+                <option>5</option>
+                <option>10</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <script>
+          $(".select2").select2();
+        </script>
+        <!--Year Search-->
+        <div class="">
+            <div class="row justify-content-md-center">
+                <form class="col-md-4">
+                <label>Pick Year</label>
+                <select class="form-control select2">
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                </select>
+                </form>
+            </div>
+        </div>
+
+      <!--<input type="text" id="messageBox" name="lastname" placeholder="Type your message..">-->
+
+      
+      <button type="button" class="Submit text-center">Search</button>
+      <button type="button" class="Submit text-center">Clear Search</button>
+    </div>
+  </body>
+</html>
